@@ -17,7 +17,7 @@ function UserListingScreen() {
   useEffect(() => {
     getUsersListings()
   }, []);
-  
+
   const openDeatilSidebar = (e, id) => {
     const user = listUsers.filter((val) => {
       return val.id === id
@@ -32,12 +32,12 @@ function UserListingScreen() {
   const closeNav = () => {
     setIsModalOpened(!isModalOpened)
     sideBarRef.current.style.width = "0";
-}
+  }
 
   return (
     <section className='userlisting p-4 bg-light'>
       <div className='container-fluid'>
-      <div onClick={()=>{setIsModalOpened(!isModalOpened);sideBarRef.current.style.width = "0";}} className={`overlay ${!isModalOpened ? 'visible' : ''}`}/>
+        <div onClick={closeNav} className={`overlay ${!isModalOpened ? 'visible' : ''}`} />
         <div className='row'>
           <div className='col-md-12 pt-2 pb-2'>
             <div className='float-md-start'>
