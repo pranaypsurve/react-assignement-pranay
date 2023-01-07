@@ -53,6 +53,12 @@
   .text_center_onsmallscreen h5{
     text-align: center;
   }
+  .login_form .login_right_col{
+    display: block;
+  }
+  .image_name_middile{
+    justify-content: center;
+  }
 }
 .text_center_onsmallscreen{
   cursor: pointer;
