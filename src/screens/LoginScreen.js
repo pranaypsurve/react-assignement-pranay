@@ -28,8 +28,11 @@ function LoginScreen() {
                 return (loginData.email === val.email && loginData.password === val.password);
             })
             if (userFind) {
+                setLoginError("")
                 localStorage.setItem('login', JSON.stringify(true));
                 navigate("/userslistings")
+            }else{
+                setLoginError("Credentials not match")
             }
         }else{
             setLoginError("User not found")
@@ -39,7 +42,7 @@ function LoginScreen() {
         <section className='login_form'>
             <div className='container-fluid'>
                 <div className='row'>
-                    <div className='col-md-6 login_left_image'>
+                    <div className='col-md-6 ps-0 login_left_image'>
                         <div className=''></div>
                     </div>
                     <div className='col-md-6 login_right_col'>
