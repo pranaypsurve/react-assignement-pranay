@@ -1,10 +1,8 @@
 import React from 'react'
 import "./sidebaruserinfo.css"
 
-function SidebarUserInfo({ userInfo, sideBarRef }) {
-    const closeNav = () => {
-        sideBarRef.current.style.width = "0";
-    }
+function SidebarUserInfo({closeNav, userInfo, sideBarRef }) {
+
     return (
         <div id="mySidebar" ref={sideBarRef} className="sidebar">
             <a className="closebtn" onClick={closeNav}>&times;</a>

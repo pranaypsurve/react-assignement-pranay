@@ -66,3 +66,17 @@
 .text_center_onsmallscreen{
   cursor: pointer;
 }
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+}
+
+.overlay.visible {
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+	transition: opacity 0.4s;
+}

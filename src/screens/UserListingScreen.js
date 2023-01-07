@@ -8,6 +8,7 @@ function UserListingScreen() {
   const sideBarRef = useRef();
   const [listUsers, setListUsers] = useState([])
   const [userInfo, setUserInfo] = useState('')
+  const [isModalOpened, setIsModalOpened] = useState(true);
 
   const getUsersListings = async () => {
     let { data } = await axios.get('https://dummyjson.com/users')
@@ -23,14 +24,20 @@ function UserListingScreen() {
     })
     setUserInfo(user)
     openNav()
+    setIsModalOpened(!isModalOpened)
   }
   const openNav = () => {
     sideBarRef.current.style.width = "400px";
   }
+  const closeNav = () => {
+    setIsModalOpened(!isModalOpened)
+    sideBarRef.current.style.width = "0";
+}
 
   return (
     <section className='userlisting p-4 bg-light'>
       <div className='container-fluid'>
+      <div onClick={()=>{setIsModalOpened(!isModalOpened);sideBarRef.current.style.width = "0";}} className={`overlay ${!isModalOpened ? 'visible' : ''}`}/>
         <div className='row'>
           <div className='col-md-12 pt-2 pb-2'>
             <div className='float-md-start'>
@@ -42,7 +49,7 @@ function UserListingScreen() {
             </div>
           </div>
           <UserListingsSearch />
-          <SidebarUserInfo userInfo={userInfo} sideBarRef={sideBarRef} />
+          <SidebarUserInfo closeNav={closeNav} userInfo={userInfo} sideBarRef={sideBarRef} />
           <UserLists listUsers={listUsers} openDeatilSidebar={openDeatilSidebar} />
         </div>
       </div>
