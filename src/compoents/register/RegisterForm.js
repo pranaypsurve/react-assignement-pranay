@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 function RegisterForm({ register, handleRegisterSubmit, handleRegisterInput }) {
     return (
         <form onSubmit={handleRegisterSubmit}>
@@ -18,6 +19,7 @@ function RegisterForm({ register, handleRegisterSubmit, handleRegisterInput }) {
             </div>
             <div className="d-grid gap-2 col-12 mx-auto">
                 <button className='btn btn-primary'>Register</button>
+                <NavLink to="/login" className='btn btn-primary'><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back to Login</NavLink>
             </div>
         </form>
     )

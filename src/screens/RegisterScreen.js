@@ -32,7 +32,7 @@ function RegisterScreen() {
         <section className='login_form'>
             <div className='container-fluid'>
                 <div className='row'>
-                    <div className='col-md-6 login_left_image'>
+                    <div className='col-md-6 ps-0 login_left_image'>
                         <div className=''></div>
                     </div>
                     <div className='col-md-6 login_right_col'>
