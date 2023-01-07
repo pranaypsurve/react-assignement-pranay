@@ -59,6 +59,9 @@
   .image_name_middile{
     justify-content: center;
   }
+  .login_form .login_left_image{
+    display: none;
+  }
 }
 .text_center_onsmallscreen{
   cursor: pointer;
