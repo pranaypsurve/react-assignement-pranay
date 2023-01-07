@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+.login_form .row {
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login_form .login_left_image div {
+  background-image: url(https://images.unsplash.com/photo-1671725501835-afb7bd1f21ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login_form .login_right_col {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.user_search_input{
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.user_search_input input {
+  background: unset;
+  border: none;
+  padding: 8px;
+  border-radius: 25px;
+  padding-left: 55px;
+}
+
+.user_search_input span {
+  position: absolute;
+  left: 50px;
+}
+@media only screen and (max-width:375px){
+  .user_search_input{
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  .user_search_input .filter_div{
+    margin-top: 25px;
   }
+}
+.user_listing_row_header div h5{
+  text-transform: uppercase;
+  margin: 0;
+}
+.user_listing_row_header div h5 i{
+  font-size: 15px;
+}
+@media only screen and (max-width:768px){
+  .user_listing_row_header div h5{
+    text-align: center;
+  }
+  .text_center_onsmallscreen h5{
+    text-align: center;
+  }
+}
+.text_center_onsmallscreen{
+  cursor: pointer;
 }
